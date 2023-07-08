@@ -1,16 +1,11 @@
-'use strict';
+module.exports.helloEarth = async (event) => {
 
-module.exports.helloEarth = async event => {
   return {
     statusCode: 200,
-    body: JSON.stringify(
-      {
-        message: 'Hello Earth with Serverless Framework',
-        input: event,
-      },
-      null,
-      2
-    ),
+    headers: {
+        "Content-Type": "text/html"
+    },
+    body: {"message" : "Hello Earth!"}
   };
 
   // Use this code if you don't use the http event with the LAMBDA-PROXY integration
