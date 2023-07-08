@@ -2,7 +2,7 @@ service: mac-serverless-helloearth
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs18.x
   stage: dev
   region: ap-southeast-1
 
@@ -151,3 +151,5 @@ resources:
       Value: !Ref Subnet1
     Subnet2Id:
       Value: !Ref Subnet2
+    LoadBalancerDomain: 
+      Value: !GetAtt HelloEarthALB.DNSName

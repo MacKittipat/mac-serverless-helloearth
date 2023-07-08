@@ -5,7 +5,7 @@ module.exports.helloEarth = async (event) => {
     headers: {
         "Content-Type": "text/html"
     },
-    body: {"message" : "Hello Earth!"}
+    body: "<h1>Hello Earth!</h1>"
   };
 
   // Use this code if you don't use the http event with the LAMBDA-PROXY integration
